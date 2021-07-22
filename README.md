@@ -41,19 +41,19 @@ Resolução:
 
 Resolução:
 
-#include <stdio.h>
+    #include <stdio.h>
 
-int main() {
-    
-    float valorReais;
-    const float valorDolar = 2.32;
-    
-    printf("\nDigite o valor em reais: ");
-    scanf("%f",& valorReais);
-    printf("\nO valor convertido = %.2f",valorReais*valorDolar);
+    int main() {
 
-    return 0;
-}
+        float valorReais;
+        const float valorDolar = 2.32;
+
+        printf("\nDigite o valor em reais: ");
+        scanf("%f",& valorReais);
+        printf("\nO valor convertido = %.2f",valorReais*valorDolar);
+
+        return 0;
+    }
 
 
 ---------------------------------------------------------------------------------------------------------------------
@@ -62,23 +62,23 @@ int main() {
 
 Resolução:
 
-#include <stdio.h>
+    #include <stdio.h>
 
-int main() {
-    
-    float valorReais;
-    float valorDolar;
-    
-    printf("\nDigite o valor em reais: ");
-    scanf("%f",& valorReais);
-    
-    printf("\nDigite a cotação atual do dolar: ");
-    scanf("%f",& valorDolar);
-    
-    printf("\nO valor convertido = %.2f",valorReais*valorDolar);
+    int main() {
 
-    return 0;
-}
+        float valorReais;
+        float valorDolar;
+
+        printf("\nDigite o valor em reais: ");
+        scanf("%f",& valorReais);
+
+        printf("\nDigite a cotação atual do dolar: ");
+        scanf("%f",& valorDolar);
+
+        printf("\nO valor convertido = %.2f",valorReais*valorDolar);
+
+        return 0;
+    }
 
 
 ---------------------------------------------------------------------------------------------------------------------
@@ -89,28 +89,28 @@ int main() {
 
 Resolução: 
 
-#include <stdio.h>
+    #include <stdio.h>
 
-int main() {
-    
-    float x1, x2, x3;
-    float w1, w2, w3;
-    float resul;
-    
-    printf("\nDigite a nota 1 e seu respectivo peso: ");
-    scanf("%f %f",& x1, & w1);
-    printf("\nDigite a nota 2 e seu respectivo peso: ");
-    scanf("%f %f",& x2, & w2);
-    
-    printf("\nDigite a nota 3 e seu respectivo peso: ");
-    scanf("%f %f",& x3, & w3);
-    
-    resul = ((x1*w1)+(x2*w2)+(x3*w3))/(w1 + w2 + w3);
-    
-    printf("\nA media ponderada = %.2f", resul);
+    int main() {
 
-    return 0;
-}
+        float x1, x2, x3;
+        float w1, w2, w3;
+        float resul;
+
+        printf("\nDigite a nota 1 e seu respectivo peso: ");
+        scanf("%f %f",& x1, & w1);
+        printf("\nDigite a nota 2 e seu respectivo peso: ");
+        scanf("%f %f",& x2, & w2);
+
+        printf("\nDigite a nota 3 e seu respectivo peso: ");
+        scanf("%f %f",& x3, & w3);
+
+        resul = ((x1*w1)+(x2*w2)+(x3*w3))/(w1 + w2 + w3);
+
+        printf("\nA media ponderada = %.2f", resul);
+
+        return 0;
+    }
 
 ---------------------------------------------------------------------------------------------------------------------
 
@@ -118,18 +118,18 @@ int main() {
 
 Resolução:
 
-#include <stdio.h>
+    #include <stdio.h>
 
-int main() {
-    
-    float salario;
-    
-    printf("\nDigite o salario: ");
-    scanf("%f",& salario);
-    printf("\nO novo salario será de = %.2f ", salario*1.37);
+    int main() {
 
-    return 0;
-}
+        float salario;
+
+        printf("\nDigite o salario: ");
+        scanf("%f",& salario);
+        printf("\nO novo salario será de = %.2f ", salario*1.37);
+
+        return 0;
+    }
 
 ---------------------------------------------------------------------------------------------------------------------
 
@@ -137,22 +137,22 @@ int main() {
 
 Resolução:
 
-#include <stdio.h>
+    #include <stdio.h>
 
-int main() {
-    
-    float salario;
-    float novoSalario;
-    
-    printf("\nDigite o salario: ");
-    scanf("%f",& salario);
-    
-    novoSalario = (((salario*1.1)*1.1)*1.1);
-    
-    printf("\nO novo salario será de = %.2f ",novoSalario);
+    int main() {
 
-    return 0;
-}
+        float salario;
+        float novoSalario;
+
+        printf("\nDigite o salario: ");
+        scanf("%f",& salario);
+
+        novoSalario = (((salario*1.1)*1.1)*1.1);
+
+        printf("\nO novo salario será de = %.2f ",novoSalario);
+
+        return 0;
+    }
 
 ---------------------------------------------------------------------------------------------------------------------
 
@@ -161,25 +161,25 @@ int main() {
 
 Resolução:
 
-#include <stdio.h>
+    #include <stdio.h>
 
-int main() {
-    
-    float salario, salarioNovo;
-    float percentualAumSalario;
-    
-    printf("\nDigite o salario: ");
-    scanf("%f",& salario);
-    
-    printf("\nDigite o percentual de aumento do salario: ");
-    scanf("%f",& percentualAumSalario);
-    
-    salarioNovo = salario * ( 1 + percentualAumSalario);    /// outra forma de fazer a conta ->  salario + (salario * percentualAumSalario);
-    
-    printf("\nO novo salario será de = %.2f ",salarioNovo);
+    int main() {
 
-    return 0;
-}
+        float salario, salarioNovo;
+        float percentualAumSalario;
+
+        printf("\nDigite o salario: ");
+        scanf("%f",& salario);
+
+        printf("\nDigite o percentual de aumento do salario: ");
+        scanf("%f",& percentualAumSalario);
+
+        salarioNovo = salario * ( 1 + percentualAumSalario);    /// outra forma de fazer a conta ->  salario + (salario * percentualAumSalario);
+
+        printf("\nO novo salario será de = %.2f ",salarioNovo);
+
+        return 0;
+    }
 
 
 ---------------------------------------------------------------------------------------------------------------------
@@ -188,29 +188,29 @@ int main() {
 
 Resolução:
 
-#include <stdio.h>
+    #include <stdio.h>
 
-int main() { 
-    
-    int segundos;
-    int minutos;
-    int horas;
-    int dias;
+    int main() { 
 
-    printf("\nDigite um valor de segundos: ");
-    scanf("%d",& segundos);
+        int segundos;
+        int minutos;
+        int horas;
+        int dias;
 
-    minutos = segundos/60;
-    segundos = segundos % 60;
-    horas = minutos /60;
-    minutos = minutos%60;
-    dias = horas/24;
-    horas = horas%24;
+        printf("\nDigite um valor de segundos: ");
+        scanf("%d",& segundos);
 
-    printf("  %d dias,  %d horas, %d minutos e %d segundos", dias, horas, minutos, segundos);
+        minutos = segundos/60;
+        segundos = segundos % 60;
+        horas = minutos /60;
+        minutos = minutos%60;
+        dias = horas/24;
+        horas = horas%24;
 
-    return 0;
-}
+        printf("  %d dias,  %d horas, %d minutos e %d segundos", dias, horas, minutos, segundos);
+
+        return 0;
+    }
 
 ---------------------------------------------------------------------------------------------------------------------
 
