@@ -27,7 +27,7 @@ int main() {
     scanf("%f",&ladoQuadrado);
     
     perimetro = 4*ladoQuadrado;
-    area = pow(ladoQuadrado, 2); // ladoQuadrado*ladoQuadrado
+    area = pow(ladoQuadrado, 2); // outra forma de fazer a conta ->  ladoQuadrado * ladoQuadrado;
     
     printf("\nO perimetro = %.2f",perimetro);
     printf("\nA area = %2.f",area);
@@ -174,7 +174,7 @@ int main() {
     printf("\nDigite o percentual de aumento do salario: ");
     scanf("%f",& percentualAumSalario);
     
-    salarioNovo = salario * ( 1+ percentualAumSalario);
+    salarioNovo = salario * ( 1 + percentualAumSalario);    /// outra forma de fazer a conta ->  salario + (salario * percentualAumSalario);
     
     printf("\nO novo salario será de = %.2f ",salarioNovo);
 
@@ -184,6 +184,33 @@ int main() {
 
 ---------------------------------------------------------------------------------------------------------------------
 
+### Elabore um programa que leia do teclado uma quantidade de segundos e transforme este tempo em dias, horas e minutos. 
 
+Resolução:
 
+#include <stdio.h>
 
+int main() {
+    int segundos;
+    int minutos;
+    int horas;
+    int dias;
+    
+    printf("Digite um valor de segundos: ");
+    scanf("%d",& segundos);
+    
+    minutos = segundos/60;
+    segundos = segundos % 60; 
+    horas = minutos /60;
+    minutos = horas%60;
+    dias = horas/24;
+    horas = horas%24;
+    
+    printf(" dias: %d  horas:  %d  minutos: %d  segundos: %d", dias, horas, minutos, segundos);
+    
+    return 0;
+}
+
+---------------------------------------------------------------------------------------------------------------------
+
+### Construa um programa que receba o salário-base de um funcionário, calcule e mostre o seu salário a receber, sabendo-se que esse funcionário tem gratificação de R$50,00 e paga imposto de 10% sobre o salário-base.
