@@ -14,26 +14,26 @@ obs. serão adicionado mais exercicios e listas no decorrer do andamento da disc
 
 Resolução:
 
-#include <stdio.h>
+    #include <stdio.h>
 
-#include <math.h>
+    #include <math.h>
 
-int main() {
-    
-    float ladoQuadrado;
-    float perimetro, area;
-    
-    printf("Digite o comprimento do lado de uma quadrado: ");
-    scanf("%f",&ladoQuadrado);
-    
-    perimetro = 4*ladoQuadrado;
-    area = pow(ladoQuadrado, 2); // outra forma de fazer a conta ->  ladoQuadrado * ladoQuadrado;
-    
-    printf("\nO perimetro = %.2f",perimetro);
-    printf("\nA area = %2.f",area);
-    
-    return 0;
-}
+    int main() {
+
+        float ladoQuadrado;
+        float perimetro, area;
+
+        printf("Digite o comprimento do lado de uma quadrado: ");
+        scanf("%f",&ladoQuadrado);
+
+        perimetro = 4*ladoQuadrado;
+        area = pow(ladoQuadrado, 2); // outra forma de fazer a conta ->  ladoQuadrado * ladoQuadrado;
+
+        printf("\nO perimetro = %.2f",perimetro);
+        printf("\nA area = %2.f",area);
+
+        return 0;
+    }
 
 ---------------------------------------------------------------------------------------------------------------------
 
