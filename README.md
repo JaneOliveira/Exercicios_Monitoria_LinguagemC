@@ -190,25 +190,26 @@ Resolução:
 
 #include <stdio.h>
 
-int main() {
-    int segundos;
-    int minutos;
-    int horas;
-    int dias;
+int main() { 
     
-    printf("Digite um valor de segundos: ");
-    scanf("%d",& segundos);
-    
-    minutos = segundos/60;
-    segundos = segundos % 60; 
-    horas = minutos /60;
-    minutos = horas%60;
-    dias = horas/24;
-    horas = horas%24;
-    
-    printf(" dias: %d  horas:  %d  minutos: %d  segundos: %d", dias, horas, minutos, segundos);
-    
-    return 0;
+int segundos;
+int minutos;
+int horas;
+int dias;
+
+printf("\nDigite um valor de segundos: ");
+scanf("%d",& segundos);
+
+minutos = segundos/60;
+segundos = segundos % 60;
+horas = minutos /60;
+minutos = minutos%60;
+dias = horas/24;
+horas = horas%24;
+
+printf("  %d dias,  %d horas, %d minutos e %d segundos", dias, horas, minutos, segundos);
+
+return 0;
 }
 
 ---------------------------------------------------------------------------------------------------------------------
