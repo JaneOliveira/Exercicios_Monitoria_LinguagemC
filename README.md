@@ -215,3 +215,25 @@ Resolução:
 ---------------------------------------------------------------------------------------------------------------------
 
 ### Construa um programa que receba o salário-base de um funcionário, calcule e mostre o seu salário a receber, sabendo-se que esse funcionário tem gratificação de R$50,00 e paga imposto de 10% sobre o salário-base.
+
+Resolução: 
+
+    #include <stdio.h>
+
+    int main() {
+    
+        float salarioBase;
+        float salarioFinal;
+
+        printf("d\nDigite o salario base:");
+        scanf("%f", & salarioBase);
+
+        salarioFinal = (salarioBase * 0.9)+50;
+
+        printf("\n\nO novo salario = %.2f \n\n", salarioFinal);
+
+        return 0;
+    }
+
+
+---------------------------------------------------------------------------------------------------------------------
