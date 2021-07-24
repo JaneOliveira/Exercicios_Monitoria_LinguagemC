@@ -237,3 +237,30 @@ Resolução:
 
 
 ---------------------------------------------------------------------------------------------------------------------
+
+### Faça um programa que receba o ano de nascimento de uma pessoa e o ano atual, calcule e mostre: 
+### • A idade dessa pessoa; 
+### • Quantos anos ela terá em 2028. 
+
+Resolução:
+
+    #include <stdio.h>
+
+    int main() {
+
+        int anoNascimento;
+        int anoAtual;
+
+        printf("\nDigite o ano de nascimento: ");
+        scanf("%d", & anoNascimento);
+        printf("\nDigite o ano atual: ");
+        scanf("%d", & anoAtual);
+
+        printf("\n\nA idade = %d \n\n", (anoAtual - anoNascimento));
+
+        return 0;
+    }
+    
+    ---------------------------------------------------------------------------------------------------------------------
+
+
