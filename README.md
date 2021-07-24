@@ -126,7 +126,7 @@ Resolução:
 
         printf("\nDigite o salario: ");
         scanf("%f",& salario);
-        printf("\nO novo salario será de = %.2f ", salario*1.37);
+        printf("\nO novo salario será de = %.2f ", salario * 1.37);
 
         return 0;
     }
@@ -147,9 +147,9 @@ Resolução:
         printf("\nDigite o salario: ");
         scanf("%f",& salario);
 
-        novoSalario = (((salario*1.1)*1.1)*1.1);
+        novoSalario = (((salario * 1.1) * 1.1) * 1.1);
 
-        printf("\nO novo salario será de = %.2f ",novoSalario);
+        printf("\nO novo salario será de = %.2f ", novoSalario);
 
         return 0;
     }
@@ -200,12 +200,12 @@ Resolução:
         printf("\nDigite um valor de segundos: ");
         scanf("%d",& segundos);
 
-        minutos = segundos/60;
+        minutos = segundos / 60;
         segundos = segundos % 60;
-        horas = minutos /60;
-        minutos = minutos%60;
-        dias = horas/24;
-        horas = horas%24;
+        horas = minutos / 60;
+        minutos = minutos % 60;
+        dias = horas / 24;
+        horas = horas % 24;
 
         printf("  %d dias,  %d horas, %d minutos e %d segundos", dias, horas, minutos, segundos);
 
@@ -228,7 +228,7 @@ Resolução:
         printf("d\nDigite o salario base:");
         scanf("%f", & salarioBase);
 
-        salarioFinal = (salarioBase * 0.9)+50;
+        salarioFinal = (salarioBase * 0.9) + 50;
 
         printf("\n\nO novo salario = %.2f \n\n", salarioFinal);
 
@@ -256,11 +256,163 @@ Resolução:
         printf("\nDigite o ano atual: ");
         scanf("%d", & anoAtual);
 
-        printf("\n\nA idade = %d \n\n", (anoAtual - anoNascimento));
+        printf("\n\nA idade = %d \n\n", anoAtual - anoNascimento);
 
         return 0;
     }
     
     ---------------------------------------------------------------------------------------------------------------------
 
+### Faça um programa que receba o valor de um depósito e o valor da taxa de juros, calcule e mostre o valor do rendimento e o valor total depois do rendimento.
 
+Resolução:
+
+    #include <stdio.h>
+
+    int main() {
+
+        float deposito;
+        float taxa;
+        float redimento;
+        float totalPosRendimento;
+
+        printf("\nDigite o valor do deposito: ");
+        scanf("%f", & deposito);
+        printf("\nDigite o valor da taxa: ");
+        scanf("%f", & taxa);
+
+        redimento = deposito * taxa;
+        totalPosRendimento = deposito + redimento;
+
+        printf("\n\nO redimento = %.2f \n", redimento);
+        printf("\nO total do valor pos rendimento = %.2f \n\n", totalPosRendimento);
+
+        return 0;
+    }
+
+    ---------------------------------------------------------------------------------------------------------------------
+    
+### Cada degrau de uma escada tem uma altura X. Faça um programa que receba  essa altura e a altura que o usuário deseja alcançar subindo a escada. Calcule e mostre quantos degraus o usuário deverá subir para atingir seu objetivo. 
+
+Resolução:
+
+    #include <stdio.h>
+
+    int main() {
+
+        int alturaEscada;
+        int degrau;
+        int qtdeDegraus;
+
+        printf("\ndigite os dados em centimetros\n\n");
+        printf("\nDigite a altura que deseja subir da escada: ");
+        scanf("%d",& alturaEscada);
+
+        printf("\ndigite a altura do degrau: ");
+        scanf("%d",& degrau);
+
+        qtdeDegraus = (alturaEscada/degrau) + (alturaEscada % degrau != 0);
+        printf("\nquantidade de degraus que precisa subir: %d \n\n", qtdeDegraus);
+
+
+        return 0;
+    }
+    
+   
+   ---------------------------------------------------------------------------------------------------------------------
+   
+   
+### Faça um programa que receba o peso e a altura de uma pessoa e calcule o índice de massa corpórea. Ele mede a relação entre peso e altura (peso em Kg, dividido pelo quadrado da altura em metros). 
+
+Resolução:
+
+    #include <stdio.h>
+    #include <math.h>
+
+    int main() {
+
+        float peso;
+        float altura;
+        float imc;
+
+        printf("\ndigite o peso da pessoa em Kg : ");
+        scanf("%f",& peso);
+
+        printf("\ndigite a altura da pessoa em metros: ");
+        scanf("%f",& altura);
+
+        imc = peso / pow(altura,2);
+
+        printf("\n\nO imc da pessoa = %.2f \n\n", imc);
+
+
+        return 0;
+    }
+
+   ---------------------------------------------------------------------------------------------------------------------
+   
+### Construa um programa que solicite a entrada de dois números inteiros e calcule e mostre a potência do primeiro número pelo segundo (X elevado a Y). 
+Obs: Existe uma biblioteca em C chamada “math.h”, esta biblioteca disponibiliza um conjunto de funções matemáticas como por exemplo a função pow(). Esta função 
+recebe dois valores do tipo float e retorna o resultado da potência entre eles, também do tipo float.
+
+    #include <stdio.h>
+    #include <math.h>
+
+    int main() {
+
+        int x, y;
+
+        printf("\ndigite um numero inteiro para X: ");
+        scanf("%d",& x);
+
+        printf("\ndigite um numero inteiro para Y: ");
+        scanf("%d",& y);
+
+        printf("\n\nX elevado a Y = %.2f \n\n", pow(x,y));
+
+        return 0;
+    }
+
+
+   ---------------------------------------------------------------------------------------------------------------------
+   
+
+###  Um hotel deseja fazer uma promoção especial de final de semana, concedendo um desconto de 25% na diária. Sendo informados, através do teclado, o número de apartamentos do hotel e o valor da diária por apartamento para o final de semana completo, elabore um programa para calcular: 
+### • Valor promocional da diária; 
+### • Valor total a ser arrecadado caso a ocupação neste final de semana atinja 100%; 
+### • Valor total a ser arrecadado caso a ocupação neste final de semana atinja 70%; 
+### • Valor que o hotel deixará de arrecadar em virtude da promoção, caso a ocupação atinja 100%. 
+
+    #include <stdio.h>
+    int main(){
+
+        int nApto;
+        float valorDiaria;
+        float valorPromDiaria;
+        float valorTotalArrecado100;
+        float valorTotalArrecado70;
+        float valorDeixaraRecebe;
+
+        printf("\nDigite o numero de apartamentos do hotel:");
+        scanf("%d",& nApto);
+
+        printf("\nDigite o valor da diaria:");
+        scanf("%f",& valorDiaria);
+
+        valorPromDiaria = valorDiaria * 0.75;
+        valorTotalArrecado100 = (valorPromDiaria*nApto)*2;
+        valorTotalArrecado70 = (valorPromDiaria*(nApto*0.7))*2;
+        valorDeixaraRecebe = ((valorDiaria*nApto)*2) - (valorTotalArrecado100);
+
+        printf("\nO valor promocional da diaria = %.2f",valorPromDiaria);
+        printf("\nValor total arrecado com 100 lotacao = %.2f",valorTotalArrecado100);
+        printf("\nValor total arrecado com 70 lotacao = %.2f",valorTotalArrecado70);
+        printf("\nValor que deixara de receber devido ao desconto = %.2f \n\n",valorDeixaraRecebe);
+        return 0;
+    }
+    
+    
+   ---------------------------------------------------------------------------------------------------------------------
+   
+   
+    
