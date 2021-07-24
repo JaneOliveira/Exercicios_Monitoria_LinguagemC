@@ -415,4 +415,243 @@ recebe dois valores do tipo float e retorna o resultado da potência entre eles,
    ---------------------------------------------------------------------------------------------------------------------
    
    
+### Sabe-se que o quilowatt de energia custa um quinto do salário mínimo. Faça um programa que receba o valor do salário mínimo e a quantidade de quilowatts consumida por uma residência. Calcule e mostre: 
+### • O valor, em Reais, de cada quilowatt. 
+### • O valor, em Reais, a ser pago por essa residência. 
+### • O valor, em Reais, a ser pago com desconto de 15%.
+
+Resolução:
+
+    #include <stdio.h>
+
+    int main() {
+
+        float salarioMinimo;
+        float qtdeQuilowatt;
+        float valorQuilowatt;
+        float valorPagoResidencia;
+        float valorPagoResDesconto;
+
+        printf("\ndigite salarioMinimo: ");
+        scanf("%f",& salarioMinimo);
+
+        printf("\ndigite a quantidade de quilowatt: ");
+        scanf("%f",& qtdeQuilowatt);
+
+        valorQuilowatt = salarioMinimo*0.2;
+        valorPagoResidencia = valorQuilowatt * qtdeQuilowatt;
+        valorPagoResDesconto = valorPagoResidencia*0.85;
+
+        printf("\n\nValor de cada  Quilowatt= %.2f \n", valorQuilowatt);
+        printf("\n\nValor total pago na residencia = %.2f \n", valorPagoResidencia);
+        printf("\n\nValor total pago na residencia com desconto = %.2f \n\n", valorPagoResDesconto);
+
+
+        return 0;
+    }
     
+   ---------------------------------------------------------------------------------------------------------------------
+   
+  ### Faça um programa que receba o custo de um espetáculo teatral e o preço do convite desse espetáculo. Esse programa deve calcular e mostrar: 
+### • A quantidade de convites que devem ser vendidos para que pelo menos o custo do espetáculo seja alcançado. 
+### • A quantidade de convites que devem ser vendidos para que se tenha um lucro de 23%. 
+
+Resolução:
+
+    #include <stdio.h>
+
+    int main()
+    {
+        int custoFesta;
+        int precoConvite;
+        int qtdeConvitePagaCusto;
+        int qtdeConviteLucro23;
+
+        printf("\nDigite o custo da festa: ");
+        scanf("%d",& custoFesta);
+
+        printf("\ndigite o preco do convite: ");
+        scanf("%d",& precoConvite);
+
+        qtdeConvitePagaCusto = (custoFesta/precoConvite) + (custoFesta%precoConvite != 0);
+
+        custoFesta *=1.23;
+
+        qtdeConviteLucro23 = (custoFesta/precoConvite) + (custoFesta%precoConvite != 0);
+
+        printf("\nquantidade de convites para pagar o custo da festa: %d \n\n", qtdeConvitePagaCusto);
+          printf("\nquantidade de convites para ter um lucro de 23 por cento: %d \n\n", qtdeConviteLucro23);
+
+        return 0;
+    }
+
+   ---------------------------------------------------------------------------------------------------------------------
+   
+   
+### Elabore um programa para efetuar o cálculo da quantidade de combustível  gasto em uma viagem, utilizando-se um automóvel que faz 12 Kms por litro. Para obter o cálculo, o usuário deverá fornecer o tempo gasto e a velocidade média durante a viagem. Desta forma, será possível obter a distância percorrida (distância= tempo * velocidade). 
+
+Resolução:
+
+    #include <stdio.h>
+
+    int main()
+    {
+        float tempoGasto;
+        float velocidadeMedia;
+        float distancia;
+        float qtdeGasolina;
+
+        printf("\nDigite o tempo em horas gasto na viagem: ");
+        scanf("%f",& tempoGasto);
+
+        printf("\ndigite a velocidade media: ");
+        scanf("%f",& velocidadeMedia);
+
+        distancia = tempoGasto * velocidadeMedia;
+        qtdeGasolina = distancia/12.0;
+
+        printf("\n\nA quantidade de gasolina gasta na viagem = %.2f \n\n", qtdeGasolina);
+
+
+        return 0;
+    }
+    
+
+   ---------------------------------------------------------------------------------------------------------------------
+   
+   
+### Considerando uma eleição de apenas 2 candidatos, elabore um programa que leia do teclado o número total de eleitores, o número de votos do primeiro candidato e o número de votos do segundo candidato. Em seguida, o programa deverá apresentar o percentual de votos de cada um dos candidatos e o percentual de votos nulos. 
+
+Resolução:
+
+#include <stdio.h>
+
+int main()
+{
+    int votosCandidato1;
+    int votosCandidato2;
+    int totalVotos;
+    int votosNulos;
+    float porcetagemCand1;
+    float porcetagemCand2;
+    float porcetagemNulos;
+    
+    printf("\nDigite o numero total de votos: ");
+    scanf("%d",& totalVotos);
+
+    printf("\ndigite o numero de votos do candidato 1: ");
+    scanf("%d",& votosCandidato1);
+    
+    printf("\ndigite o numero de votos do candidato 2: ");
+    scanf("%d",& votosCandidato2);
+    
+    votosNulos = totalVotos - (votosCandidato1 + votosCandidato2);
+    porcetagemCand1 = (votosCandidato1 *100)/totalVotos;
+    porcetagemCand2 = (votosCandidato2 *100)/totalVotos;
+    porcetagemNulos = (votosNulos *100)/totalVotos;
+    
+    
+    printf("\n\nA porcentagem de votos do canditado 1 = %.2f", porcetagemCand1);
+    printf("\n\nA porcentagem de votos do canditado 2 = %.2f", porcetagemCand2);
+    printf("\n\nA porcentagem de votos nulos = %.2f \n\n", porcetagemNulos);
+ 
+
+    return 0;
+}
+
+   ---------------------------------------------------------------------------------------------------------------------
+   
+   
+### Escreva um programa que converta o número 1522 (decimal) para sua representação na base binária, octal e Hexadecimal. Exiba o resultado na tela.
+### obs. não pode usar comandos que ainda nao foram visto ate a aplicação dessa atividade.
+
+Resolução:
+
+    #include <stdio.h>
+
+    int main(){
+
+        int num = 1522;
+        int resto;
+
+        printf("obs. o numero em binario esta invertido.");
+        printf("\nO numero 1522 em binario = ");
+
+        resto =  num%2;
+        printf("%d",resto);
+
+        num = num/2;
+        resto =  num%2;
+        printf("%d",resto);
+
+        num = num/2;
+        resto =  num%2;
+        printf("%d",resto);
+
+        num = num/2;
+        resto =  num%2;
+        printf("%d",resto);
+
+        num = num/2;
+        resto =  num%2;
+        printf("%d",resto);
+
+        num = num/2;
+        resto =  num%2;
+        printf("%d",resto);
+
+        num = num/2;
+        resto =  num%2;
+        printf("%d",resto);
+
+        num = num/2;
+        resto =  num%2;
+        printf("%d",resto);
+
+        num = num/2;
+        resto =  num%2;
+        printf("%d",resto);
+
+        num = num/2;
+        resto =  num%2;
+        printf("%d",resto);
+
+        num = num/2;
+        resto =  num%2;
+        printf("%d\n\n",resto);
+
+        num = 1522;
+
+        printf("obs. o numero em octal esta invertido.");
+        printf("\no numero 1522 em octal = ");
+
+        resto =  num%8;
+        printf("%d",resto);
+        num = num/8;
+        resto =  num%8;
+        printf("%d",resto);
+        num = num/8;
+        resto =  num%8;
+        printf("%d",resto);
+        num = num/8;
+        resto =  num%8;
+        printf("%d\n\n",resto);
+
+        num = 1522;
+
+        printf("obs. o numero em hecadecimal esta invertido.");
+        printf("\no numero 1522 em hexadecimal = ");
+
+        resto =  num%16;
+        printf("%x",resto);
+
+        num = num/16;
+        resto =  num%16;
+        printf("%x",resto);
+
+        num = num/16;
+        resto =  num%16;
+        printf("%x\n\n\n",resto);
+
+    return 0;
+    }
