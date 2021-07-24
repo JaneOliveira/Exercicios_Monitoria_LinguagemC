@@ -3,7 +3,7 @@
 
 ##### Lista 1 - Introduzindo o aluno a linguagem C
 
-obs. serão adicionado mais exercicios e listas no decorrer do andamento da disciplina.
+obs. serão adicionado outros repositorios no decorrer do andamento da disciplina com outras listas.
 
 ### lembre-se a várias maneiras de resolver um problema, logo, não se preucupe com codigos difentes, o importante é a logica está certa.
 
