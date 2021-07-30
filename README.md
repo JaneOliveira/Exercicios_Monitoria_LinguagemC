@@ -1,4 +1,4 @@
-# Exercicios de Monitoria em linguagem C - Lista 1
+# Exercicios de Monitoria em linguagem C - Lista 1-2
 ### Exercicios iniciais da disciplina Linguagem de Programação, do curso ciência e tecnologia da UFVJM, exercicios elaborados em linguagem C.
 
 ##### Lista 1 - Introduzindo o aluno a linguagem C
